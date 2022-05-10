@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Flyte Music</title>
+	<!-- include css-files -->
+	<link rel="stylesheet" href="css/general.css">
+	<link rel="stylesheet" href="pages-media.css">
+	<link rel="stylesheet" href="../loader/loader.css">
+</head>
+
+<body>
+
+	<!-- include JQuery -->
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"
+		integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous">
+		</script>
+
+	<div class="wrapper">
+		<div class="block">
+			<div class="block-video">
+				<video src="../genres/media/video/kisma.mp4" controls loop>
+				</video>
+				<video src="../genres/media/video/kisma-hd.mp4" controls loop>
+				</video>
+			</div>
+			<div class="block-audio">
+				<audio src="../genres/media/audio/fl.mp3" controls loop onplay="other_pause([0])">
+				</audio>
+				<audio src="../genres/media/audio/pre-fl.mp3" controls loop onplay="other_pause([1])">
+				</audio>
+			</div>
+			<div class="block-audio-mb audio__pos">
+				<audio src="../genres/media/audio/fl.mp3" controls loop onplay="other_pause([2])">
+				</audio>
+			</div>
+			<div class="block-audio-mb">
+				<audio src="../genres/media/audio/pre-fl.mp3" controls loop onplay="other_pause([3])">
+				</audio>
+			</div>
+		</div>
+		<div class="block-text">
+			<a href="https://ncs.io/Fingertips" target="_blank">
+				<p>
+					Больше о <span style="color: #e35ddf;"><em>Kisma</em></span>
+				</p>
+			</a>
+		</div>
+	</div>
+	</div>
+
+	<div id="preloader">
+		<div id="loader">
+			<div class='music'>
+				<div class='bar'></div>
+				<div class='bar'></div>
+				<div class='bar'></div>
+				<div class='bar'></div>
+				<div class='bar'></div>
+				<div class='bar'></div>
+				<div class='bar'></div>
+				<div class='bar'></div>
+				<div class='bar'></div>
+				<div class='bar'></div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Title -->
+	<section class="title">
+		<div class="block-title">
+			<p>Kisma - Fly Again</p>
+		</div>
+	</section>
+
+	<script>
+		// Repeat
+		var a = document.getElementsByTagName("audio");
+
+		function other_pause(b) {
+			for (i = 0; i < a.length; i++) {
+				if (!(i == b)) { a[i].pause(); a[i].currentTime = 0; };
+			}
+		}
+
+	</script>
+
+	<script src="../genres/dnb.js"></script>
+
+</body>
+
+</html>

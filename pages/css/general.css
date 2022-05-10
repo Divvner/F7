@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css?family=Hind:300,regular,500,600,700');
+
+body {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+	background-color: #000;
+	overflow-x: hidden;
+}
+
+/* 
+
+	Video
+
+*/
+
+.block-video {
+	display: flex;
+	justify-content: center;
+	border-radius: 2%;
+}
+
+.block-video video:first-child {
+	width: 70%;
+	border-radius: 2%;
+	animation: flicker 1.5s infinite;
+}
+
+.block-video video:last-child {
+	width: 100%;
+	border-radius: 2%;
+	animation: flicker 1.5s infinite;
+}
+
+/* 
+
+	Audio
+
+*/
+
+.block-audio {
+	margin-top: 50px;
+	display: flex;
+	justify-content: center;
+}
+
+.block-audio audio:first-child {
+	margin-right: 100px;
+}
+
+.block-audio audio:last-child {
+	margin-left: 100px;
+}
+
+.block-audio audio p {
+	position: absolute;
+	font-size: 1.5em;
+	font-family: 'Montserrat';
+	color: yellow;
+	z-index: 99999999;
+}
+
+.block-audio-mb {
+	display: flex;
+	justify-content: center;
+}
+
+.block-audio-mb audio:first-child {
+	margin-top: 50px;
+}
+
+/* 
+
+	Title
+
+*/
+
+.title {
+	position: absolute;
+	bottom: 0;
+}
+
+.block-title {
+	display: block;
+}
+
+.block-title p {
+	font-family: 'Montserrat';
+	font-style: italic;
+	font-size: 1.5em;
+	color: #fff;
+	animation: flicktext 2s infinite;
+}
+
+/* 
+
+	Author Text
+
+*/
+
+.block-text {
+	display: flex;
+	justify-content: center;
+	margin-top: 50px;
+}
+
+.block-text a {
+	text-decoration: none;
+	text-transform: none;
+}
+
+.block-text a p {
+	font-family: 'Montserrat';
+	letter-spacing: 0.001em;
+	font-size: 1.5em;
+	color: #fff;
+}
+
+/* 
+
+	Oval Block
+
+*/
+
+.oval {
+	position: relative;
+	background-color: #000;
+	width: 100px;
+	height: 100px;
+	top: 700px;
+}
+
+/* 
+
+	Key`s
+
+*/
+
+@keyframes flicker {
+
+	0%,
+	100% {
+		box-shadow: 0 0 35px #e35ddf;
+	}
+
+	50% {
+		box-shadow: 0 0 55px #e35ddf;
+	}
+
+}
+
+@keyframes flicktext {
+
+	0%,
+	100% {
+		text-shadow: #FFF 0px 0px 5px, #FFF 0px 0px 10px, #FFF 0px 0px 15px, #FF2D95 0px 0px 20px, #FF2D95 0px 0px 30px, #FF2D95 0px 0px 40px, #FF2D95 0px 0px 50px, #FF2D95 0px 0px 75px;
+	}
+
+	50% {
+		text-shadow: 0 0 10px #e35ddf;
+	}
+
+}
